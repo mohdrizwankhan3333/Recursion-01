@@ -1,0 +1,192 @@
+#include <iostream>
+using namespace std;
+
+// Recursive function to generate nth Fibonacci number
+int fibonacci(int n) {
+    if (n <= 1) {
+        return n;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+
+// Function to print Fibonacci series up to n terms
+void printFibonacciSeries(int n) {
+    for (int i = 0; i <= n; ++i) {
+        cout << fibonacci(i) << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+    int num = 10;
+    cout << "Fibonacci series up to " << num << " terms: ";
+    printFibonacciSeries(num);
+
+    return 0;
+}
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+// Recursive function to print numbers in ascending order
+void printNumbersAscending(int n) {
+    if (n >= 1) {
+        printNumbersAscending(n - 1);
+        cout << n << " ";
+    }
+}
+
+int main() {
+    // Test case 1
+    cout << "Test case 1 (n = 1): ";
+    printNumbersAscending(1);
+    cout << endl;
+
+    // Test case 2
+    cout << "Test case 2 (n = 5): ";
+    printNumbersAscending(5);
+    cout << endl;
+
+    // Test case 3
+    cout << "Test case 3 (n = 0): ";
+    printNumbersAscending(0);
+    cout << endl;
+
+    // Test case 4
+    cout << "Test case 4 (n = 9): ";
+    printNumbersAscending(9);
+    cout << endl;
+
+    // Test case 5
+    cout << "Test case 5 (n = -3): ";
+    printNumbersAscending(-3);
+    cout << endl;
+
+    return 0;
+}
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+// Recursive function to calculate factorial
+int factorial(int n) {
+    if (n <= 1)
+        return 1;
+    else
+        return n * factorial(n - 1);
+}
+
+int main() {
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
+
+    // Calculate factorial and print the result
+    cout << "Factorial of " << num << " is " << factorial(num) << endl;
+
+    return 0;
+}
+
+
+
+#include <iostream>
+
+using namespace std;
+int main()         //total number of digits
+{
+int s=0;
+int num = 106576;
+while(num>0)
+{
+int l= num%10;
+s++;
+num=num/10;
+    
+}
+cout<<s;
+return 0;
+}
+
+
+
+#include <iostream>
+
+using namespace std;
+int main()
+{
+int s=0;
+int num = 106576;
+while(num>0)
+{
+int l= num%10;
+s+=l;
+num=num/10;
+    
+}     //sum of digits
+cout<<s;
+return 0;
+}
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+// Recursive function to sum the digits of a number
+int sumDigits(int num) {
+    if (num == 0) {
+        return 0;
+    } else {
+        return (num % 10) + sumDigits(num / 10);
+    }
+}
+
+int main() {
+    int num = 106576;
+    int result = sumDigits(num);
+
+    cout << "The sum of the digits is: " << result << endl;
+    return 0;
+}
+
+
+
+
+#include <iostream>
+using namespace std;
+
+// Recursive function to calculate p^q
+int power(int p, int q) {
+    if (q == 0) {
+        return 1; // Base case: any number to the power of 0 is 1
+    } else {
+        return p * power(p, q - 1); // Recursive case
+    }
+}
+
+int main() { 
+
+ //to print p^q
+    int p, q;
+    cout << "Enter the base (p): ";
+    cin >> p;
+    cout << "Enter the exponent (q): ";
+    cin >> q;
+
+    int result = power(p, q);
+    cout << p << "^" << q << " = " << result << endl;
+
+    return 0;}
